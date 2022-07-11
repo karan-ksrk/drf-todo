@@ -29,7 +29,7 @@ SECURE_SSL_REDIRECT=False
 SESSION_COOKIE_SECURE=False
 CSRF_COOKIE_SECURE=False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'drf-todo-1.herokuapp.com']
 
 # Application definition
 
@@ -97,10 +97,21 @@ WSGI_APPLICATION = "todo.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+DATABASE = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd89fsgkjng5gr8',
+        'USER': 'altglomgzfeydu',
+        'PASSWORD': '90f07d74ba4d1fa221ce69e3af187de7008561b578c4cf2893e2e80b24e67f81',
+        'HOST': 'ec2-44-195-162-77.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
